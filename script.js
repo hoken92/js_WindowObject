@@ -38,8 +38,8 @@ function loopGuessNumber() {
     setTimeout(loopGuessNumber, 2000);
   }
 
-  // If count is = 3, game over
-  if (count === 3) {
+  // If count is = 3 or player clicks cancel = null, game over
+  if (count === 3 || userInput === null) {
     bodyEl.textContent = `Game over. The number was ${number}`;
   }
 }
